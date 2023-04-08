@@ -2,8 +2,11 @@
   "name": "personalportfolio",
   "version": "1.0.0",
   "description": "Personal portfolio",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "concurrently \"nodemon server/server.js\" \"webpack-dev-server --open\""
   },
   "repository": {
     "type": "git",
@@ -30,6 +33,7 @@
     "babel-loader": "^9.1.2",
     "concurrently": "^7.6.0",
     "css-loader": "^6.7.3",
+    "nodemon": "^2.0.22",
     "sass-loader": "^13.2.1",
     "style-loader": "^3.3.2",
     "webpack-cli": "^5.0.1"
